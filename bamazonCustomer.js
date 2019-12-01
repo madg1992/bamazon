@@ -18,7 +18,7 @@ connection.connect(function (err) {
 })
 
 var start = function () {
-    connection.query('SELECT * FROM products', function (err, res) {
+    connection.query('SELECT * FROM bamazon_DB.products', function (err, res) {
         if (err) throw err;
         for (var i = 0; i < res.length; i++) {
             console.log(
@@ -59,7 +59,7 @@ var askQuestion = function (res) {
                     }
                 }).then(function (answer) {
                     if ((res[id].stock_quantity - answer.quantity) > 0) {
-                        connection.query("UPDATE products SET stock_quantity='" + (res[id].stock_quantity - answer.quantity) + "' WHERE product_name'" + product + "'", function (err, response) {
+                        connection.query("UPDATE bamazon_DB.products SET stock_quantity='" + (res[id].stock_quantity - answer.quantity) + "' WHERE product_name'" + product + "'", function (err, response) {
                             console.log("You successfully bought the product!");
                             start();
                         })
