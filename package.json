@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "bamazon homework SMU coding bootcamp",
+  "main": "bamazon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madg1992/bamazon.git"
+  },
+  "author": "Mark Gallardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madg1992/bamazon/issues"
+  },
+  "homepage": "https://github.com/madg1992/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1"
+  }
+}
