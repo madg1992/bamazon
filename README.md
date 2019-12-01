@@ -21,7 +21,8 @@ The command line is: **node bamazonCustomer.js**
 1. Notice that it will print out the table that we created from MySQL workbench.
 2. Then it will ask the user which item they would like to purchase by typing in the items id number.
 3. Next, it wil ask the user the amount they would like to purchase.
-4. Once the transaction is completed, the database will update with the new inventory quantity and will be displayed on the terminal.
+4. Once the transaction is completed, the user will be notified with this message: _"You succefully bought the product!"_
+5. Then, the database will be updated with the new inventory quantity and the new data will be displayed on the terminal.
 
 ![Screenshot of table creation](bamazonDemo.png)
 
