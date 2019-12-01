@@ -38,18 +38,18 @@ var askQuestion = function (res) {
     inquirer.prompt([{
         type: "input",
         name: "choice",
-        message: "Please type in the product name you would like to order:"
+        message: "Please type in the product id number you would like to order:"
     }]).then(function (answer) {
         var correct = false;
         for (var i = 0; i < res.length; i++) {
-            if (res[i].product_name == answer.choice) {
+            if (res[i].item_id == answer.choice) {
                 correct = true;
                 var product = answer.choice;
                 var id = i;
                 inquirer.prompt({
                     type: "input",
                     name: "quantity",
-                    message: "How many of this item woyld you like to purchase?",
+                    message: "How many of this item would you like to purchase?",
                     validate: function (value) {
                         if (isNaN(value) == false) {
                             return true;
@@ -64,7 +64,7 @@ var askQuestion = function (res) {
                             start();
                         })
                     } else {
-                        console.log("Not a valid selection!");
+                        console.log("Insufficient Quantity!");
                         askQuestion(res);
                     }
                 })
